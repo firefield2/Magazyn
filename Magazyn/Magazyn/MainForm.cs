@@ -138,6 +138,14 @@ namespace Magazyn
             }
             return name + number;
         }
+
+        private void clearFilter_Click(object sender, EventArgs e)
+        {
+            categoryComboBox.SelectedIndex = 0;
+            localizationComboBox.SelectedIndex = 0;
+            searchTextBox.Text = "";
+            Search();
+        }
     }
 }
 
