@@ -69,6 +69,8 @@ namespace Magazyn
             localizationNameTB.Clear();
             localizationListBox.SelectedItem = db.LocalizationsList.FirstOrDefault(x => x.Name == name);
             localizationNameTB.Text = name;
+            localizationNameTB.Focus();
+            localizationNameTB.SelectAll();
         }
 
         private bool CheckNameAvailibility(string name)

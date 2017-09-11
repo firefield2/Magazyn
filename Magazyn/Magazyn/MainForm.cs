@@ -100,6 +100,11 @@ namespace Magazyn
 
         private void EditButton_Click(object sender, EventArgs e)
         {
+            EditProduct();
+        }
+
+        private void EditProduct()
+        {
             Product product = (Product)productDataGridView.CurrentRow.DataBoundItem;
             EditProductForm editProductForm = new EditProductForm(product);
             editProductForm.OnClose += Search;
@@ -139,12 +144,17 @@ namespace Magazyn
             return name + number;
         }
 
-        private void clearFilter_Click(object sender, EventArgs e)
+        private void ClearFilter_Click(object sender, EventArgs e)
         {
             categoryComboBox.SelectedIndex = 0;
             localizationComboBox.SelectedIndex = 0;
             searchTextBox.Text = "";
             Search();
+        }
+
+        private void ProductDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EditProduct();
         }
     }
 }

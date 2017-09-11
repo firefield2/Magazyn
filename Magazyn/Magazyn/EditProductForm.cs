@@ -102,9 +102,9 @@ namespace Magazyn
             nameTextBox.Clear();
             codeTextBox.Clear();
             descriptionTextBox.Clear();
-            priceNumericUpDown.ResetText();
-            quantityNumericUpDown.ResetText();
-            reservationNumericUpDown.ResetText();
+            priceNumericUpDown.Value = 0;
+            quantityNumericUpDown.Value = 0;
+            reservationNumericUpDown.Value = 0;
             localizationComboBox.SelectedIndex = 0;
             categoryComboBox.SelectedIndex = 0;
         }

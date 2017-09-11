@@ -69,6 +69,8 @@ namespace Magazyn
             categoryNameTB.Clear();
             categoryListBox.SelectedItem = db.CategoriesList.FirstOrDefault(x => x.Name == name);
             categoryNameTB.Text = name;
+            categoryNameTB.Focus();
+            categoryNameTB.SelectAll();
         }
 
         private bool CheckNameAvailibility(string name)

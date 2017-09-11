@@ -46,6 +46,7 @@
             this.orderHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.clearFilter = new System.Windows.Forms.Button();
             this.localizationComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
@@ -68,7 +69,6 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearFilter = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
@@ -208,6 +208,18 @@
             this.mainPanel.Size = new System.Drawing.Size(784, 434);
             this.mainPanel.TabIndex = 2;
             // 
+            // clearFilter
+            // 
+            this.clearFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearFilter.Location = new System.Drawing.Point(652, 49);
+            this.clearFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.clearFilter.Name = "clearFilter";
+            this.clearFilter.Size = new System.Drawing.Size(116, 28);
+            this.clearFilter.TabIndex = 22;
+            this.clearFilter.Text = "Wyczyść filtr";
+            this.clearFilter.UseVisualStyleBackColor = true;
+            this.clearFilter.Click += new System.EventHandler(this.ClearFilter_Click);
+            // 
             // localizationComboBox
             // 
             this.localizationComboBox.DisplayMember = "Name";
@@ -336,6 +348,7 @@
             this.productDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.productDataGridView.Size = new System.Drawing.Size(752, 336);
             this.productDataGridView.TabIndex = 12;
+            this.productDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductDataGridView_CellDoubleClick);
             // 
             // NameDGV
             // 
@@ -433,18 +446,6 @@
             this.addToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.addToolStripMenuItem.Text = "Dodaj";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.AddProductsButton_Click);
-            // 
-            // clearFilter
-            // 
-            this.clearFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clearFilter.Location = new System.Drawing.Point(652, 49);
-            this.clearFilter.Margin = new System.Windows.Forms.Padding(4);
-            this.clearFilter.Name = "clearFilter";
-            this.clearFilter.Size = new System.Drawing.Size(116, 28);
-            this.clearFilter.TabIndex = 22;
-            this.clearFilter.Text = "Wyczyść filtr";
-            this.clearFilter.UseVisualStyleBackColor = true;
-            this.clearFilter.Click += new System.EventHandler(this.clearFilter_Click);
             // 
             // MainForm
             // 
